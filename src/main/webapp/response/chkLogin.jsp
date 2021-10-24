@@ -13,17 +13,19 @@
 <c:set var='dbPwd' value="1"/>
 <c:set var='inputId' value="${param.id }"/>
 <c:set var='inputPwd' value="${param.pwd }"/>
+
+
 <c:choose>
 	<c:when test="${dbId eq inputId }">
 		<c:choose>
 			<c:when test="${dbPwd eq inputPwd }">
-				로그인 성공
-				<script type="text/javascript">
-					alert('로그인 성공')
-				</script>
+			로그인 성공
+			<script type="text/javascript">
+				alert('로그인 성공')
+			</script>
 			</c:when>
 			<c:otherwise>
-				비밀번호 틀림
+			비밀번호 틀림
 			</c:otherwise>
 		</c:choose>
 	</c:when>
@@ -31,6 +33,7 @@
 		<b style="color:red;">존재하지 않은 아이디 입니다</b>
 	</c:otherwise>
 </c:choose>
+
 <%-- 
 <c:choose>
 	<c:when test="${dbId == inputId && dbPwd eq inputPwd }">
@@ -65,8 +68,7 @@
 		}else{
 			out.print("인증실패!!!!");
 			response.sendRedirect("loginForm.jsp");
-		}
-	--%>
+		--%>
 </body>
 </html>
 
